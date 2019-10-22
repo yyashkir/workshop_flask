@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Configure{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="x1">X1</label>
+    <input name="x1" id="x1" required>
+    <label for="x2">X2</label>
+    <input name="x2" id="x2" required>
+    <input type="submit" value="Start">
+  </form>
+  {% endblock %}
