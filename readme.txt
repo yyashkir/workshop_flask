@@ -1,3 +1,10 @@
+First time
+
+    virtualenv -p python3 env
+    env\Scripts\activate.bat
+    pip install -r requirements.txt
+
+
 		In this directory:
 		open terminal
 		activate server
