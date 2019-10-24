@@ -8,9 +8,9 @@ parser.add_argument('--x1', type=float, required=True)
 parser.add_argument('--x2', type=float, required=True)
 args = parser.parse_args()
 
-print(f'X1^X2={args.x1**2+args.x2}')
-#for i in range(0,10):
-#    print(f'{i}')
-#    sys.stdout.flush()
+print(f'X1^2+X2={args.x1**2+args.x2}')
+for i in range(0,10):
+    print(f'{i}')
+    sys.stdout.flush()
 #    time.sleep(1)
     

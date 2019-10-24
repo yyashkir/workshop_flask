@@ -1,4 +1,5 @@
-
+24Oct2019
+server_activate.bat, readme.txt, run_app.bat modified
 24Sep2019
 cmd
 #change dir to:

@@ -1,0 +1,4 @@
+range	20
+chart_data	chart.in
+chart_file	toy.png
+result	report.res

@@ -1,0 +1,1 @@
+set terminal png;set output 'toy.png';set grid;plot 'chart.in' using 1:2  with lines; 
