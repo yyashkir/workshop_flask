@@ -1,0 +1,62 @@
+Original credit rating transition matrix is raised to arbitrary non-negative
+power in order, for example, to obtain rating transition for certain time period,
+using available (usually, annual) transition matrix 
+
+application code:	matrix_power.cpp
+application:		matrix_power.exe
+
+Data file: data_file_name  
+Input parameters:
+	power 				(non-negative float/double)
+	expansion			(integer, normally > 10)
+	data_file_name		(input matrix file)
+	output_file_name	(output file created by app)	
+CommandLine:
+	> matrix_power.exe power expansion data_file_name output_file_name
+	
+	or
+	> matrix_power.bat
+	
+File matrix_power.bat example:
+	matrix_power.exe 2.15 10 original_matrix matrix_power
+	
+Interface requirements
+	input forms for: power, expansion, data_file_name, output_file_name
+	display of input matrix file content (for now)
+	run button
+	display of output file content
+			
+Next stage:
+		to have editable form (panel) for input matrix
+		(to edit, maybe to copy from somewhere and to paste into panel, auto-save)
+		
+		
+TEST EXAMPLE:
+				original matrix
+AAA AA A BBB BB B C D 
+0.949498 0.0458354 0.00362107 0.00104522 0.0005 0.0002 0.0001 5e-05 
+0.00424946 0.923669 0.0676625 0.00352423 0.000176093 0.000353247 0.000197834 0.0001671 
+0.000446864 0.0183125 0.933776 0.0438048 0.00179845 0.000774072 0.00054326 0.00054411 
+0.000229986 0.0017893 0.0390343 0.915315 0.03578 0.00385914 0.00204253 0.00195016 
+0.000333148 0.000960316 0.00356114 0.0681278 0.846176 0.0611821 0.010828 0.00883187 
+1e-05 0.000151663 0.00264326 0.00572218 0.0720334 0.823138 0.0387421 0.057569 
+1e-05 0.0001 0.00333333 0.0029383 0.0169578 0.138915 0.579544 0.258311 
+0 0 0 0 0 0 0 1 
+
+power = 0.5
+
+				result (matrix^0.5)
+AAA AA A BBB BB B C D 
+0.973976 0.0236667 0.00143175 0.000501948 0.000255401 9.65286e-05 5.34683e-05 1.82907e-05 
+0.00219175 0.960877 0.0351 0.00141948 6.1534e-05 0.000175187 0.000105458 6.98445e-05 
+0.00021818 0.00949153 0.965908 0.0227698 0.000715008 0.000366595 0.000292312 0.000238319 
+0.000114192 0.000826695 0.0202771 0.956115 0.0190361 0.00168005 0.00109785 0.000853036 
+0.000173021 0.000484152 0.00146076 0.0362742 0.918764 0.0332322 0.00596834 0.0036429 
+1.27551e-06 6.27291e-05 0.00133316 0.00227306 0.0393591 0.905481 0.0231182 0.0283719 
+4.5152e-06 4.18841e-05 0.00184267 0.00140536 0.00813303 0.0832364 0.759939 0.145397 
+0 0 0 0 0 0 0 1 
+
+
+
+	
+
