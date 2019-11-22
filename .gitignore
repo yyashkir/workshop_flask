@@ -1,5 +1,7 @@
 
 flask_tex/
-*.bak
-
 env/
+toy_app/toy.exe
+toy_app/plotcommand
+matrix_app/
+*.bak
