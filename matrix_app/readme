@@ -59,4 +59,11 @@ AAA AA A BBB BB B C D
 
 
 	
+Compilation line on Mac
 
+g++ matrix_power.cpp  -o matrix_power -O2 -larmadillo
+
+other
+brew install aramadillo
+
+hdf5 etc have to be installed, in case of library header error upgrade armadillo
