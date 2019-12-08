@@ -7,3 +7,4 @@ toy_app/plotcommand
 *.pyc
 .DS_Store
 matrix_prg
+tmp/

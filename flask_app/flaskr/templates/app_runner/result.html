@@ -5,5 +5,9 @@
 {% endblock %}
 
 {% block content %}
-<p>{{result_data}}</p>
+<a href={{result_data.download_path}}>Download result</a>
+<div class="output">
+  <p>{{result_data.content}}</p> 
+</div>
+
 {% endblock %}
