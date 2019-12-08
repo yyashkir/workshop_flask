@@ -4,3 +4,4 @@ env/
 toy_app/toy.exe
 toy_app/plotcommand
 *.bak
+*.pyc
