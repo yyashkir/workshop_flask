@@ -5,3 +5,5 @@ toy_app/toy.exe
 toy_app/plotcommand
 *.bak
 *.pyc
+.DS_Store
+matrix_prg

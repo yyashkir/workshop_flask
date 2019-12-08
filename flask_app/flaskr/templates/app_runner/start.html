@@ -6,10 +6,15 @@
 
 {% block content %}
   <form method="post">
-    <label for="x1">X1</label>
-    <input name="x1" id="x1" required>
-    <label for="x2">X2</label>
-    <input name="x2" id="x2" required>
+    <label for="power">Power</label>
+    <input name="power" id="power" required>
+
+    <label for="expansion">Expansion</label>
+    <input name="expansion" id="expansion" required>
+
+    <label for="matrix_fname">File with matrix</label>
+    <input name="matrix_file" type="file" required>
+
     <input type="submit" value="Start">
   </form>
   {% endblock %}

@@ -14,9 +14,13 @@ bp = Blueprint('app_runner', __name__, url_prefix='/app_runner')
 
 @bp.route('/start', methods=['GET', 'POST'])
 def start():
+    print('start')
     if request.method == 'POST':
-        x1 = request.form['x1']
-        x2 = request.form['x2']
+        x1 = request.form['power']
+        x2 = request.form['expansion']
+        x3 = request.form['matrix_file']
+
+        print(x1,x2,x3)
 
         task_id = uuid.uuid4().hex
         error = None
