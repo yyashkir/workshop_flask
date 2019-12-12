@@ -23,6 +23,9 @@ env\Scripts\activate.bat
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 	
 #open browser, use address: http://127.0.0.1:5000/app_runner/start
+#   @bp.route('/start', methods=['GET', 'POST']) changed to @bp.route('/', methods=['GET', 'POST'])
+# browser call is now: http://127.0.0.1:5000/app_runner/
+
 	
 #shut down (in new terminal):
 > env\Scripts\deactivate.bat
@@ -38,10 +41,3 @@ Q/A
 
 ***********************************
 @bp.route('/', methods=['GET', 'POST'])
-bp = Blueprint('matrix_power', __name__, url_prefix='/matrix_power')
-
-conda
-pip install flask
-
-pandas    to html 
-(env) pip install pandas

@@ -2,6 +2,7 @@ import functools
 import subprocess
 import threading
 import os
+import pandas as pd
 
 from flask import (
     Blueprint, flash, g, redirect, render_template, request, session, url_for
@@ -17,7 +18,7 @@ bp = Blueprint('app_runner', __name__, url_prefix='/app_runner')
 
 tmp_folder = 'tmp'
 
-@bp.route('/start', methods=['GET', 'POST'])
+@bp.route('/', methods=['GET', 'POST'])
 def start():
     if request.method == 'POST':
 
@@ -69,5 +70,4 @@ def result(task_id):
         with open(task['output_path'], 'r') as myfile:
             data=myfile.read()
             result_data={ 'download_path' : url_for('static', filename=f"files/{task['output_fname']}"), 'content' : data }
-
     return render_template('app_runner/result.html', result_data=result_data)
