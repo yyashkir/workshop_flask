@@ -1,10 +1,14 @@
 
 flask_tex/
 env/
-toy_app/toy.exe
+toy_app/
 toy_app/plotcommand
 *.bak
 *.pyc
 .DS_Store
 matrix_prg
 tmp/
+flask_app/flaskr/static/files/out_original_matrix
+flask_app/out_original_matrix
+matrix_app/out_original_matrix
+flask_app/flaskr/static/files/out_original_matrix

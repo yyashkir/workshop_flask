@@ -35,3 +35,13 @@ Q/A
 - removed "tester.py" from /flask_app_runner
 - flask_app\tester.py
 - how to edit web page?
+
+***********************************
+@bp.route('/', methods=['GET', 'POST'])
+bp = Blueprint('matrix_power', __name__, url_prefix='/matrix_power')
+
+conda
+pip install flask
+
+pandas    to html 
+(env) pip install pandas
