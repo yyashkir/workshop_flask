@@ -7,7 +7,7 @@
 {% block content %}
 <a href={{result_data.download_path}}>Download result</a>
 <div class="output">
-  <p>{{result_data.content}}</p> 
+  {{result_data.content|safe}} 
 </div>
 
 {% endblock %}

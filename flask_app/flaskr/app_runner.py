@@ -10,6 +10,7 @@ from flask import (
 
 from werkzeug.utils import secure_filename
 
+import pandas as pd
 
 import uuid
 tasks = {}
@@ -17,6 +18,11 @@ tasks = {}
 bp = Blueprint('app_runner', __name__, url_prefix='/app_runner')
 
 tmp_folder = 'tmp'
+
+def csv_read_and_render(fname):
+    df = pd.read_csv(fname, sep=' ')
+    del df['Unnamed: 8']
+    return df.to_html(index=False)
 
 @bp.route('/', methods=['GET', 'POST'])
 def start():
@@ -67,7 +73,6 @@ def result(task_id):
         flash(error)
         result_data=None
     else:
-        with open(task['output_path'], 'r') as myfile:
-            data=myfile.read()
-            result_data={ 'download_path' : url_for('static', filename=f"files/{task['output_fname']}"), 'content' : data }
+        html_string = csv_read_and_render(task['output_path'])
+        result_data={ 'download_path' : url_for('static', filename=f"files/{task['output_fname']}"), 'content' : html_string}
     return render_template('app_runner/result.html', result_data=result_data)
