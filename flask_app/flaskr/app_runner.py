@@ -50,6 +50,7 @@ def start():
             output_fname = f'out_{filename}'
             output_path= os.path.join('flaskr/static/files/', output_fname)
             exec_line = f"{os.path.normpath('../matrix_app/matrix_app.exe')} {power} {expansion} {matrix_save_fname} {output_path}"
+
             print(exec_line)
 
             proc = subprocess.Popen(exec_line, shell=True, stdout=subprocess.PIPE)

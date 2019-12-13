@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}Configure{% endblock %}</h1>
+  <h1>{% block title %}Enter power (double), expansion (integer > 5) and choose matrix file{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
   <form method="post" enctype="multipart/form-data">
-    <label for="power">Power</label>
+    <label for="power">power</label>
     <input name="power" id="power" required>
 
-    <label for="expansion">Expansion</label>
+    <label for="expansion">expansion</label>
     <input name="expansion" id="expansion" required>
 
     <label for="matrix_fname">File with matrix</label>
     <input name="matrix_file" type="file" required>
 
-    <input type="submit" value="Start">
+    <input type="submit" value="Calculate">
   </form>
   {% endblock %}

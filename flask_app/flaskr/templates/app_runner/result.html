@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}Result{% endblock %}</h1>
+  <h1>{% block title %}Result of raising matrix to the power{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
-<a href={{result_data.download_path}}>Download result</a>
+<a href={{result_data.download_path}}>Download matrix power (default download location)</a>
 <div class="output">
   {{result_data.content|safe}} 
 </div>

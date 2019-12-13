@@ -1,3 +1,11 @@
+	General start if virtual environment is already installed
+Go to C:\home\projects\workshop_flask
+click consequently:
+		activate_flask.bat
+		run_server.bat
+		open_interface
+*******************************************************************************
+
 #First time
 
     virtualenv -p python env
